@@ -53,7 +53,7 @@ jobs:
   with:
     name: build
     path: ${{ env.DOCKERFILE_PATH }}/build.tgz
-
+    
       - name: Publish to ${{ env.APP_NAME }}
         uses: azure/webapps-deploy@v2.1
         with:
