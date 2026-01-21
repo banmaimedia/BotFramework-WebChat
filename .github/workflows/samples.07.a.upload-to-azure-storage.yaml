@@ -25,7 +25,7 @@ jobs:
 
     steps:
       - name: Checking out for ${{ github.ref }}
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Read variables
         id: variables
