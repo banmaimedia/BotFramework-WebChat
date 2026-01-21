@@ -3,10 +3,13 @@ name: samples/07.a.upload-to-azure-storage
 on:
   workflow_dispatch: {}
 
-env:
-  APP_NAME: webchat-samples-uploadazurestorage
-  DOCKER_TAG: sha-${{ github.sha }}
-  DOCKERFILE_PATH: samples/07.advanced-web-chat-apps/a.upload-to-azure-storage
+on:
+   push:
+     branches:
+      - main
+     paths:
+       - .github/workflows/samples.07.a.upload-to-azure-storage.yaml
+       - samples/07.advanced-web-chat-apps/a.upload-to-azure-storage/**
   PUBLISH_PROFILE: ${{ secrets.SAMPLES_UPLOADAZURESTORAGE_PUBLISH_PROFILE }}
 
 jobs:
